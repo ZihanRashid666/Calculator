@@ -16,7 +16,7 @@ The following steps on CMD or Powershell
 
 • The repository is successfully cloned, as indicated by the progress messages.
 
-• Change directory into the cloned project folder: Type cd Employee-Data-Analysis--Filtering--Averaging--and-Date-Conversions
+• Change directory into the cloned project folder: Type cd Calculator
 
 • Git Config for username : git config --global user.name "ZihanRashid666"
 

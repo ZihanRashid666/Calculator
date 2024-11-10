@@ -22,8 +22,6 @@ The following steps on CMD or Powershell
 
 • Git Config for email : git config --global user.email "zihanrob@gmail.com"
 
-• To create new branch : git checkout -b fix-csv-manipulation
-
 • To check all branch : git branch
 
 • To edit code : code .

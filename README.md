@@ -34,8 +34,8 @@ The following steps on CMD or Powershell
 
 • Display state of project after Update : git status
 
-• Add Message of Update : git commit -m "New Name CSV Added"
+• Add Message of Update : git commit -m "Calculator feature updated"
 
-• Updatting from local to Remote Repository : git commit -m "New Name CSV Added"
+• Updatting from local to Remote Repository : git push origin fix-calculator-update
 
 Pull Requests from Github

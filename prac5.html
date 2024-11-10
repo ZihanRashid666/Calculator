@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 80px;
+        font-family: Arial, sans-serif;
+        background-color: #f3f3f3;
+    }
+
+    .calc {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        width: 300px;
+        text-align: center;
+    }
+
+    #display {
+        border: 1px solid #ddd;
+        height: 50px;
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 1.5em;
+        text-align: right;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    button {
+        width: 60px;
+        height: 50px;
+        font-size: 1.2em;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #e0e0e0;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    button:hover {
+        background-color: #d0d0d0;
+    }
+
+    button:active {
+        background-color: #c0c0c0;
+    }
+
+    .operator {
+        background-color: #ffab40;
+        color: #fff;
+    }
+
+    .operator:hover {
+        background-color: #ff9f1a;
+    }
+
+    .equal {
+        background-color: #4caf50;
+        color: #fff;
+    }
+
+    .equal:hover {
+        background-color: #45a049;
+    }
+
+    .clear {
+        background-color: #f44336;
+        color: #fff;
+    }
+
+    .clear:hover {
+        background-color: #e53935;
+    }
+</style>
+
+<body>
+    <div class="calc">
+        <p id="display"></p>   
+        <button onclick="AddOnScreen('7')">7</button>
+        <button onclick="AddOnScreen('8')">8</button>
+        <button onclick="AddOnScreen('9')">9</button>
+        <button onclick="AddOnScreen('+')" class="operator">+</button><br>
+
+        <button onclick="AddOnScreen('4')">4</button>
+        <button onclick="AddOnScreen('5')">5</button>
+        <button onclick="AddOnScreen('6')">6</button>
+        <button onclick="AddOnScreen('-')" class="operator">-</button><br>
+
+        <button onclick="AddOnScreen('1')">1</button>
+        <button onclick="AddOnScreen('2')">2</button>
+        <button onclick="AddOnScreen('3')">3</button>
+        <button onclick="AddOnScreen('*')" class="operator">*</button><br>
+
+        <button onclick="AddOnScreen('0')">0</button>
+        <button onclick="AddOnScreen('.')">.</button>
+        <button onclick="reset()" class="clear">C</button>
+        <button onclick="AddOnScreen('/')" class="operator">/</button><br>
+
+        <button onclick="calculate()" class="equal" style="width: 100%">=</button>
+    </div>
+ 
+    <script>
+        let expression = "";
+
+        function AddOnScreen(value) {
+            expression += value;
+            document.getElementById("display").textContent = expression;
+        }
+
+        function calculate() {
+            try {
+                const result = eval(expression);
+                document.getElementById("display").textContent = result;
+                expression = result.toString(); // Update expression to result for further calculations
+            } catch (error) {
+                document.getElementById("display").textContent = "Invalid";
+            }
+        }
+
+        function reset() {
+            expression = "";
+            document.getElementById("display").textContent = "";
+        }
+    </script>
+</body>
+</html>

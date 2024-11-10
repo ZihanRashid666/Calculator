@@ -34,6 +34,6 @@ The following steps on CMD or Powershell
 
 • Add Message of Update : git commit -m "Calculator feature updated"
 
-• Updatting from local to Remote Repository : git push origin fix-calculator-update
+• Updatting from local to Remote Repository : git push origin new-calculator
 
 Pull Requests from Github

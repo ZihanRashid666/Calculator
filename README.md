@@ -22,17 +22,11 @@ The following steps on CMD or Powershell
 
 • Git Config for email : git config --global user.email "zihanrob@gmail.com"
 
-• To check all branch : git branch
+• To check all branch : git checkout -b new-calculator
 
-• To edit code : code .
+• View branch : git branch
 
 • Display state of project : git status
-
-• Update the edited code to local project : git add
-
-• Display state of project after Update : git status
-
-• Add Message of Update : git commit -m "Calculator feature updated"
 
 • Updatting from local to Remote Repository : git push origin new-calculator
 
